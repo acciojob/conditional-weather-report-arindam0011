@@ -9,7 +9,6 @@ const App = () => {
     let weatherarr=[
         {temperature: 25, conditions: "Sunny"},
         {temperature: 15, conditions: "Comfortable"},
-        {temperature: 19, conditions: "Rainy"}
     ];
     setWeather(weatherarr);
   }, []);
