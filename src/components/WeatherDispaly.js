@@ -1,14 +1,20 @@
 import React from 'react'
 
-const WeatherDispaly = ({weather}) => {
-    const { temperature, conditions } = weather;
-    const color = temperature > 20 ? 'red' : 'blue';
-  
+const WeatherDispaly = ({ weather }) => {
+   
     return (
-      <div>
-        <p style={{ color: color }}>Temperature: {temperature}</p>
-        <span style={{ color: "green" }}>Conditions: {conditions}</span>
-      </div>
+        <div>
+            {weather.map((element, index) => (
+                <div key={index}>
+                    <p style={{ color: element.temperature > 20 ? "rgb(255, 0, 0)" : "rgb(0, 128, 0)" }}>
+                        Temperature: {element.temperature}
+                    </p>
+                    <span style={{ color: "green" }}>
+                        Conditions: {element.conditions}
+                    </span>
+                </div>
+            ))}
+        </div>
     );
 }
 

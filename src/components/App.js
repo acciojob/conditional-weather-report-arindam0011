@@ -2,11 +2,16 @@ import React, { useState, useEffect } from 'react';
 import WeatherDispaly from './WeatherDispaly';
 
 const App = () => {
-  const [weather, setWeather] = useState({ temperature: 0, conditions: '' });
+  const [weather, setWeather] = useState([]);
 
   useEffect(() => {
     // Update weather data with the provided input
-    setWeather({ temperature: 25, conditions: "Sunny" });
+    let weatherarr=[
+        {temperature: 25, conditions: "Sunny"},
+        {temperature: 15, conditions: "Comfortable"},
+        {temperature: 19, conditions: "Rainy"}
+    ];
+    setWeather(weatherarr);
   }, []);
 
   return (
