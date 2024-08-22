@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import WeatherDispaly from './WeatherDispaly';
+import WeatherDisplay from './WeatherDisplay';  // Correct import
 
 const App = () => {
   const [weather, setWeather] = useState([]);
 
   useEffect(() => {
     // Update weather data with the provided input
-    let weatherarr=[
-        {temperature: 25, conditions: "Sunny"},
-        {temperature: 15, conditions: "Comfortable"},
+    const weatherarr = [
+        { temperature: 25, conditions: "Sunny" },
     ];
     setWeather(weatherarr);
   }, []);
 
   return (
     <div>
-      <WeatherDispaly weather={weather} />
+      <WeatherDisplay weather={weather} />
     </div>
   );
 };
